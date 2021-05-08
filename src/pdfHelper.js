@@ -59,10 +59,12 @@ const PdfHelper = {
             intent: 'print'
           }).promise;
           var imageData = dataCanvas.toBuffer();
-          await writeFile(
-            imageData,
-            `processedImages/${fileNamePrefix}_page${pageNo}.jpg`
-          );
+
+          //commented the code to create image files
+          // await writeFile(
+          //   imageData,
+          //   `processedImages/${fileNamePrefix}_page${pageNo}.jpg`
+          // );
           await callTesseract(
             imageData,
             `processedText/${fileNamePrefix}_page${pageNo}`
