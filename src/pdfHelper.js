@@ -25,7 +25,7 @@ const PdfHelper = {
   processPages: async (pdfDocProxy) => {
     const pageNos = pdfDocProxy.numPages;
 
-    for (var j = 81; j < 87; j++) {
+    for (var j = 1; j < pageNos; j++) {
       const pageData = await pdfDocProxy.getPage(j);
       console.log("processing page:", j);
       const ops = await pageData.getOperatorList();
@@ -42,10 +42,9 @@ const PdfHelper = {
         const data = pageData.objs.get(ops.argsArray[i][0]);
 
         if (data.data.buffer) {
-          console.log(data,pageData._pageInfo.view);
           var scale = data.width / pageData._pageInfo.view[2];
           var viewport = pageData.getViewport({
-            scale: 2.5,
+            scale: scale,
             rotation: 0,
             dontFlip: false,
             offsetX: 0,

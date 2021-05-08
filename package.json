@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "extract": "node ./src/index.js"
+    "extract": "node ./src/index.js test.pdf"
   },
   "keywords": [
     "image",
