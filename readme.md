@@ -39,11 +39,15 @@ run the below command
 
 >npm run-script extract
 
-The above command will look for a file named **test.pdf** and start extracting.
+The above command will look for a file named **test.pdf** in the **fileSource** folder and start extracting.
 
  >npm  --fileName="_FILENAME_" run-script extract
 
  We can also specify a filename of our wish. We need to replace the _FILENAME_ with our filename.
+
+ The extracted text will be saved in separate text file for each page in the **processedText** folder.
+
+ **Important: Files to be processed should be inside the folder _fileSource_**
 
 Happy extraction...!
 
