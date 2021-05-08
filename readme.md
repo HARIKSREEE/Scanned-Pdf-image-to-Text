@@ -29,17 +29,21 @@ Install all of the node dependencies by running
 Also you need to install the tesseract [binaries from here](https://github.com/UB-Mannheim/tesseract/wiki).
 
 
-Create
+Create the below folders in the same directory.
 
-processedText,
-processedImages,
-fileSource
+>processedText,
+>processedImages,
+>fileSource
 
 run the below command
 
- **npm  --fileName="name of the pdf file in fileSource folder" run-script extract**
+>npm run-script extract
 
- if we omit the --fileName argument, the default name it will look is **test.pdf**
+The above command will look for a file named **test.pdf** and start extracting.
 
-We need to add the pdf file to be processed in the **fileSource folder**.
+ >npm  --fileName="_FILENAME_" run-script extract
+
+ We can also specify a filename of our wish. We need to replace the _FILENAME_ with our filename.
+
+Happy extraction...!
 
