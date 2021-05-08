@@ -1,5 +1,5 @@
 {
-  "name": "tesseract-node-pdf-image-converter",
+  "name": "tesseract-pdf-image-text-extractor",
   "version": "1.0.0",
   "description": "To convert scanned images in a pdf to text",
   "main": "index.js",
