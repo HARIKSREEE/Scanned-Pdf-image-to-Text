@@ -24,8 +24,8 @@ const PdfHelper = {
 
   processPages: async (pdfDocProxy) => {
     const pageNos = pdfDocProxy.numPages;
-
-    for (var j = 1; j < pageNos; j++) {
+    console.log(pageNos);
+    for (var j = 1; j <= pageNos; j++) {
       const pageData = await pdfDocProxy.getPage(j);
       console.log("processing page:", j);
       const ops = await pageData.getOperatorList();
