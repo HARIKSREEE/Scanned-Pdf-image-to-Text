@@ -12,7 +12,9 @@ const initiateConversion = require("./pdfHelper");
   console.log("Starting the converison process");
   try {
     await initiateConversion(fileName);
+    console.log("Conversion completed");
   } catch (ex) {
+    debugger;
     console.log("An error occured ", ex);
   }
 })();
